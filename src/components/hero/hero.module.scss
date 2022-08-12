@@ -1,0 +1,87 @@
+@use '../../styles/abstracts' as *;
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  padding: 0 0.5em;
+  height: 90vh;
+
+  h1 {
+    @include heading-2xl;
+    font-weight: $font-semibold;
+    color: #212121;
+    .keyword {
+      font-weight: $font-bold;
+    }
+  }
+}
+
+@include sm {
+  .hero {
+    padding: 0 2em;
+    h1 {
+      @include heading-3xl;
+    }
+  }
+}
+
+@include md {
+  .hero {
+    padding: 0 2em;
+    h1 {
+      @include heading-4xl;
+    }
+  }
+}
+
+@include lg {
+  .hero {
+    padding: 0 2em;
+    h1 {
+      @include heading-5xl;
+    }
+  }
+}
+
+.block {
+  position: relative;
+  color: white;
+  .keyword {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+.highlight {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  display: block;
+  padding: 1rem 4rem;
+  transform: skewY(4deg);
+  border-radius: 0.5rem;
+  background-color: $violet;
+}
+
+@include sm {
+  .highlight {
+    padding: 1.35rem 4.875rem;
+  }
+}
+
+@include md {
+  .highlight {
+    padding: 1.5rem 5.75rem;
+  }
+}
+
+@include lg {
+  .highlight {
+    padding: 1.875rem 7.5rem;
+    transform: skewY(4deg);
+  }
+}

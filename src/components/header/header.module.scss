@@ -1,0 +1,18 @@
+@use '../../styles/abstracts/index' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+
+  h1 {
+    @include heading-2xl;
+    cursor: default;
+  }
+}
+
+@include sm {
+  .header {
+    padding: 0 2rem;
+  }
+}
