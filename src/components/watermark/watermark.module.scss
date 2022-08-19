@@ -1,0 +1,21 @@
+@use '../../styles/abstracts' as *;
+
+.watermarkLg,
+.watermarkMd,
+.watermarkSm {
+  font-weight: $font-bold;
+  color: darken($yellow, 5);
+  cursor: default;
+}
+
+.watermarkLg {
+  @include heading-9xl;
+}
+
+.watermarkMd {
+  @include heading-6xl;
+}
+
+.watermarkSm {
+  @include heading-4xl;
+}
