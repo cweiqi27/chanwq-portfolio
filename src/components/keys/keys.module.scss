@@ -1,0 +1,21 @@
+@use '../../styles/abstracts/index' as *;
+
+.keysContainer {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  @include container;
+}
+
+.whiteKey {
+  
+  background-color: white;
+}
+
+.blackKey {
+
+}
+
+.keyShadow {
+
+}

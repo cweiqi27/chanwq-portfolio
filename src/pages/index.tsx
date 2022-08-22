@@ -9,6 +9,8 @@ import {useRef} from "react";
 import Wave from "../components/wave/wave";
 import Circle from "../components/circle/circle";
 import Keys from "../components/keys/keys";
+import HeroBackground from "../components/hero/heroBackground/heroBackground";
+import SkillsBackground from "../components/skills/skillsBackground/skillsBackground";
 
 const Home: NextPage = () => {
   const parallax = useRef<IParallax>(null);
@@ -21,7 +23,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Chan Wei Qi</title>
-        <meta name="description" content="Powered by cweiqi27" />
+        <meta name="description" content="cwq, React Developer" />
         <meta name="author" content="Chan Wei Qi" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
@@ -33,6 +35,8 @@ const Home: NextPage = () => {
 
       <Parallax pages={2} ref={parallax}>
 
+        {/* Hero Section */}
+        <HeroBackground />
         <Circle />
         <Keys />
         <Hero />
@@ -40,14 +44,16 @@ const Home: NextPage = () => {
         <ScrollButton offset={0.8} speed={-0.25} factor={0.1} position="right" onClick={() => scroll(1)} />
         <Header />
 
+        {/* Skills Section */}
+        <SkillsBackground />
+        <Wave />
         <ParallaxLayer
           offset={1}
-          speed={2.5}
+          speed={0.5}
+          factor={0.1}
         >
           Something else
         </ParallaxLayer>
-
-        <Wave />
 
       </Parallax>
 
