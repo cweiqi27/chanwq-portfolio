@@ -16,13 +16,13 @@ const ScrollButton = ({ offset, speed, factor, onClick }: ScrollButtonProps) => 
   const scroll = useSpring({
     from: { top: '0.5rem' },
     to: { top: '3.5rem' },
-    config: () => flip ? config.molasses : config.slow,
+    config: () => flip ? config.slow : config.molasses,
     loop: { reverse: true },
     onRest: () => set(!flip)
   });
   const blip = useSpring({
     from: { opacity: 0 },
-    to: { opacity: 0.6 },
+    to: { opacity: 0.4 },
     delay: 2000,
     config: config.molasses
   });
