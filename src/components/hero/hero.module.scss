@@ -1,20 +1,22 @@
 @use '../../styles/abstracts' as *;
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
+.heroContainer {
+  display: grid;
+  place-items: center;
   padding: 0 0.5em;
   @include container;
+}
 
-  h1 {
+.hero {
+  display: grid;
+  place-items: center;
+
+  & h1 {
+    position: relative;
     @include heading-2xl;
     font-family: $heading-font;
     letter-spacing: 0.15rem;
-    color: #212121;
+    color: white;
     .name {
       font-weight: $font-medium;
       font-style: italic;
@@ -23,6 +25,16 @@
       font-weight: $font-semibold;
     }
   }
+}
+
+.glass {
+  position: absolute;
+  width: Max(50%, 60vw);
+  max-width: $screen-md;
+  padding: 10em;
+  border-radius: 1rem;
+  @include glass;
+  border: 1px solid rgba(255, 255, 255, 0.45);
 }
 
 @include sm {
@@ -52,48 +64,5 @@
   }
 }
 
-.block {
-  position: relative;
-  color: white;
-  .keyword {
-    position: relative;
-    display: inline-block;
-    opacity: 0;
-    @include fade-in;
-  }
-}
 
 
-.highlight {
-  position: absolute;
-  top: 5px;
-  left: -5px;
-  display: block;
-  padding: 1rem 4rem;
-  transform: skewY(4deg);
-  border-radius: 0.5rem;
-  background-color: $violet;
-  @include grow-skew-sm;
-}
-
-@include sm {
-  .highlight {
-    padding: 1.25rem 4.875rem;
-  }
-}
-
-@include md {
-  .highlight {
-    top: 10px;
-    padding: 1.25rem 5.75rem;
-  }
-}
-
-@include lg {
-  .highlight {
-    top: 5px;
-    padding: 1.55rem 7.25rem;
-    transform: skewY(4deg) translateY(0.6rem);
-    @include grow-skew-lg;
-  }
-}
