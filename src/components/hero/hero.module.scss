@@ -1,21 +1,26 @@
 @use '../../styles/abstracts' as *;
 
 .hero {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   gap: 1rem;
+  width: 100%;
   padding: 0 0.5em;
-  height: 90vh;
+  @include container;
 
   h1 {
     @include heading-2xl;
-    font-weight: $font-semibold;
+    font-family: $heading-font;
+    letter-spacing: 0.15rem;
     color: #212121;
+    .name {
+      font-weight: $font-medium;
+      font-style: italic;
+    }
     .keyword {
-      font-weight: $font-bold;
+      font-weight: $font-semibold;
     }
   }
 }
@@ -53,35 +58,42 @@
   .keyword {
     position: relative;
     display: inline-block;
+    opacity: 0;
+    @include fade-in;
   }
 }
 
+
 .highlight {
   position: absolute;
-  top: 0;
+  top: 5px;
   left: -5px;
   display: block;
   padding: 1rem 4rem;
   transform: skewY(4deg);
   border-radius: 0.5rem;
   background-color: $violet;
+  @include grow-skew-sm;
 }
 
 @include sm {
   .highlight {
-    padding: 1.35rem 4.875rem;
+    padding: 1.25rem 4.875rem;
   }
 }
 
 @include md {
   .highlight {
-    padding: 1.5rem 5.75rem;
+    top: 10px;
+    padding: 1.25rem 5.75rem;
   }
 }
 
 @include lg {
   .highlight {
-    padding: 1.875rem 7.5rem;
-    transform: skewY(4deg);
+    top: 5px;
+    padding: 1.55rem 7.25rem;
+    transform: skewY(4deg) translateY(0.6rem);
+    @include grow-skew-lg;
   }
 }
