@@ -1,0 +1,22 @@
+@use '../../styles/abstracts/index' as *;
+
+.ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 2.75rem 1.5rem;
+  border: solid 1px white;
+  border-radius: 100%;
+  background-color: $yellow;
+  opacity: 60%;
+
+  .ball {
+    position: absolute;
+    padding: 0.75rem;
+    border-radius: 50%;
+    background-color: white;
+  }
+}
+
+
+
