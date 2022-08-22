@@ -1,5 +1,4 @@
 @use 'breakpoints' as *;
-@use 'keyframes' as *;
 @use 'typography' as *;
 
 // Layouts
@@ -89,28 +88,6 @@
 @mixin heading-md {
   font-size: $text-base;
   line-height: 1.5rem;
-}
-
-// Animations
-@mixin grow-skew-lg {
-  animation: grow-skew-lg 2s;
-  -moz-animation: grow-skew-lg 2s;
-  -o-animation: grow-skew-lg 2s;
-  -webkit-animation: grow-skew-lg 2s;
-}
-
-@mixin grow-skew-sm {
-  animation: grow-skew-sm 2s;
-  -moz-animation: grow-skew-sm 2s;
-  -o-animation: grow-skew-sm 2s;
-  -webkit-animation: grow-skew-sm 2s;
-}
-
-@mixin fade-in {
-  animation: 3s ease 0s forwards 1 fade-in;
-  -moz-animation: 3s ease 0s forwards 1 fade-in;
-  -o-animation: 3s ease 0s forwards 1 fade-in;
-  -webkit-animation: 3s ease 0s forwards 1 fade-in;
 }
 
 // Turn off selection
