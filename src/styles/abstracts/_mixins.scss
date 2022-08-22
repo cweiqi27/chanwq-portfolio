@@ -1,5 +1,12 @@
 @use 'breakpoints' as *;
+@use 'keyframes' as *;
 @use 'typography' as *;
+
+// Layouts
+@mixin container {
+  margin: 0 auto;
+  max-width: $screen-xl;
+}
 
 // Breakpoints
 @mixin sm{
@@ -28,6 +35,17 @@
 
 
 // Headings
+@mixin heading-9xl {
+  font-size: $text-9xl;
+  line-height: 1;
+  letter-spacing: 1rem;
+}
+
+@mixin heading-8xl {
+  font-size: $text-8xl;
+  line-height: 1;
+}
+
 @mixin heading-7xl {
   font-size: $text-7xl;
   line-height: 1;
@@ -69,6 +87,38 @@
 }
 
 @mixin heading-md {
-  font-size: $text-md;
+  font-size: $text-base;
   line-height: 1.5rem;
+}
+
+// Animations
+@mixin grow-skew-lg {
+  animation: grow-skew-lg 2s;
+  -moz-animation: grow-skew-lg 2s;
+  -o-animation: grow-skew-lg 2s;
+  -webkit-animation: grow-skew-lg 2s;
+}
+
+@mixin grow-skew-sm {
+  animation: grow-skew-sm 2s;
+  -moz-animation: grow-skew-sm 2s;
+  -o-animation: grow-skew-sm 2s;
+  -webkit-animation: grow-skew-sm 2s;
+}
+
+@mixin fade-in {
+  animation: 3s ease 0s forwards 1 fade-in;
+  -moz-animation: 3s ease 0s forwards 1 fade-in;
+  -o-animation: 3s ease 0s forwards 1 fade-in;
+  -webkit-animation: 3s ease 0s forwards 1 fade-in;
+}
+
+// Turn off selection
+@mixin no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
