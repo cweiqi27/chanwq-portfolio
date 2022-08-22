@@ -1,24 +1,33 @@
 import styles from './watermark.module.scss';
+import {ParallaxLayer} from "@react-spring/parallax";
 
 type WatermarkProps = {
-  name: string,
-  isLarge?: boolean,
-  isMedium?: boolean,
-  isSmall?: boolean
+  name: string;
+  offset: number;
+  speed?: number;
+  factor?: number;
+  position: string;
+  size: string;
 };
 
 const Watermark = ({
   name,
-  isLarge,
-  isMedium,
-  isSmall
+  offset,
+  speed,
+  factor,
+  position,
+  size
 }: WatermarkProps) => {
-  if(isLarge)
-    return <h1 className={styles.watermarkLg}>{ name }</h1>;
-  else if(isMedium)
-    return <h1 className={styles.watermarkMd}>{ name }</h1>;
-  else
-    return <h1 className={styles.watermarkSm}>{ name }</h1>;
+  return (
+    <ParallaxLayer
+      offset={offset}
+      speed={speed}
+      factor={factor}
+      className={`${styles.watermarkContainer} ${styles[position]}`}
+    >
+      <h1 className={`${styles.watermark} ${styles[size]}`}>{ name }</h1>
+    </ParallaxLayer>
+  );
 }
 
 export default Watermark;

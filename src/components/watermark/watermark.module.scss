@@ -1,21 +1,32 @@
 @use '../../styles/abstracts' as *;
 
-.watermarkLg,
-.watermarkMd,
-.watermarkSm {
+.watermarkContainer {
+  display: flex;
+  @include container;
+
+  &.right {
+    justify-content: right;
+  }
+  &.left {
+    justify-content: left;
+  }
+  &.center {
+    justify-content: center;
+  }
+}
+
+.watermark {
   font-weight: $font-bold;
   color: darken($yellow, 5);
   cursor: default;
-}
 
-.watermarkLg {
-  @include heading-9xl;
-}
-
-.watermarkMd {
-  @include heading-6xl;
-}
-
-.watermarkSm {
-  @include heading-4xl;
+  &.lg {
+    @include heading-9xl;
+  }
+  &.md {
+    @include heading-6xl;
+  }
+  &.sm {
+    @include heading-4xl;
+  }
 }
