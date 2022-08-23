@@ -1,21 +1,45 @@
 @use '../../styles/abstracts/index' as *;
 
 .keysContainer {
+  position: relative;
   display: flex;
   justify-content: right;
-  align-items: center;
   @include container;
 }
 
-.whiteKey {
-  
-  background-color: white;
-}
+.keys {
+  position: relative;
 
-.blackKey {
+  .keyShadow {
+    position: relative;
+  }
 
-}
+  .whiteKey,
+  .blackKey {
+    position: absolute;
+  }
 
-.keyShadow {
+  .keyShadow {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 10em Min(3em, 3vw);
+    @include glass;
+  }
 
+  .whiteKey {
+    z-index: 2;
+    top: -.75rem;
+    left: -.75rem;
+    padding: 10em Min(3em, 3vw);
+    background-color: white;
+  }
+
+  .blackKey {
+    z-index: 3;
+    top: -1.5rem;
+    left: -2rem;
+    padding: 5em Min(2em, 2vw);
+    background-color: black;
+  }
 }
