@@ -73,11 +73,6 @@ const Home: NextPage = () => {
           <SkillList />
           <Wave />
         </SkillsBackground>
-        {/* <Wave /> */}
-
-        {/* <ParallaxLayer offset={1} speed={0.5} factor={0.1}>
-          <Skills />
-        </ParallaxLayer> */}
       </Parallax>
     </>
   );
