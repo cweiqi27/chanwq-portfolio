@@ -1,0 +1,20 @@
+.skillsContainer {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  border-radius: 1rem;
+  height: 80%;
+  width: 50%;
+}
+
+.skillList {
+  display: flex;
+  gap: 0.5rem;
+  cursor: default;
+
+  & li {
+    color: white;
+  }
+}

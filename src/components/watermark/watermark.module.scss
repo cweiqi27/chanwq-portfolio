@@ -1,4 +1,4 @@
-@use '../../styles/abstracts' as *;
+@use "../../styles/abstracts" as *;
 
 .watermarkContainer {
   display: flex;
@@ -18,7 +18,7 @@
 .watermark {
   font-weight: $font-bold;
   color: darken($yellow, 5);
-  cursor: default;
+  pointer-events: none;
 
   &.lg {
     @include heading-9xl;

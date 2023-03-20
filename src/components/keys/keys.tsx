@@ -4,18 +4,14 @@ import { ParallaxLayer } from "@react-spring/parallax";
 
 const Keys = () => {
   return (
-    <ParallaxLayer
-      offset={.25}
-      speed={.25}
-      className={styles.keysContainer}
-    >
-      <div className={styles.keys}>
+    <ParallaxLayer offset={0.25} speed={0.05} className={styles.keysContainer}>
+      <animated.div className={styles.keys}>
         <animated.div className={styles.keyShadow} />
         <animated.div className={styles.whiteKey} />
         <animated.div className={styles.blackKey} />
-      </div>
+      </animated.div>
     </ParallaxLayer>
   );
-}
+};
 
 export default Keys;

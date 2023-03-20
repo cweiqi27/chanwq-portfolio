@@ -1,12 +1,18 @@
 import { useSpring, animated } from "@react-spring/web";
-import styles from "./heroBackground.module.scss"
+import styles from "./heroBackground.module.scss";
 
-const HeroBackground = () => {
+type HeroBackgroundProps = {
+  children: React.ReactNode;
+};
+
+const HeroBackground = ({ children }: HeroBackgroundProps) => {
+  const springStyle = useSpring({});
+
   return (
-    <div
-      className={styles.heroBackground}
-    />
+    <animated.div className={styles.heroBackground} style={springStyle}>
+      <div className={styles.container}>{children}</div>
+    </animated.div>
   );
-}
+};
 
 export default HeroBackground;

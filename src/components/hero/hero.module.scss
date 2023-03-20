@@ -1,4 +1,4 @@
-@use '../../styles/abstracts' as *;
+@use "../../styles/abstracts" as *;
 
 .heroContainer {
   display: grid;
@@ -7,62 +7,64 @@
   @include container;
 }
 
-.hero {
-  display: grid;
-  place-items: center;
+.heroTitle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2em;
+  // border-radius: 1rem;
+  // @include glass;
+  // border: 1px solid rgba(255, 255, 255, 0.45);
 
-  & h1 {
-    position: relative;
-    @include heading-2xl;
-    font-family: $heading-font;
-    letter-spacing: 0.15rem;
+  & .greeting {
     color: white;
-    .name {
-      font-weight: $font-medium;
-      font-style: italic;
-    }
-    .keyword {
-      font-weight: $font-semibold;
-    }
+  }
+
+  & .name {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-family: $heading-font;
+    @include heading-7xl;
+    font-weight: $font-bold;
+    letter-spacing: 0.15rem;
+    background: linear-gradient(
+      135deg,
+      rgba(16, 7, 32, 1) 0%,
+      rgba(49, 8, 123, 1) 36%,
+      rgba(171, 32, 124, 1) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  & .identity {
+    color: white;
+    align-self: flex-end;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    content: "<>";
+    font-size: $text-lg;
+    color: white;
+    opacity: 40%;
+    transform: rotate(-15deg);
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0.5rem;
+    content: "</>";
+    font-size: $text-lg;
+    color: white;
+    opacity: 40%;
+    transform: rotate(5deg);
   }
 }
-
-.glass {
-  position: absolute;
-  width: Max(50%, 60vw);
-  max-width: $screen-md;
-  padding: 10em;
-  border-radius: 1rem;
-  @include glass;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-}
-
-@include sm {
-  .hero {
-    padding: 0 2em;
-    h1 {
-      @include heading-3xl;
-    }
-  }
-}
-
-@include md {
-  .hero {
-    padding: 0 2em;
-    h1 {
-      @include heading-4xl;
-    }
-  }
-}
-
-@include lg {
-  .hero {
-    padding: 0 2em;
-    h1 {
-      @include heading-5xl;
-    }
-  }
-}
-
-
-

@@ -4,10 +4,10 @@ import { useSpring, animated, config } from "@react-spring/web";
 
 const Circle = () => {
   const float = useSpring({
-    from: { x: -60, y: -35 },
-    to: { x: -20, y: -10 },
+    from: { x: -60, y: -35, backgroundColor: "#fa2fb5" },
+    to: { x: -20, y: -10, backgroundColor: "#00faff" },
     config: config.molasses,
-    loop: { reverse: true }
+    loop: { reverse: true },
   });
   return (
     <ParallaxLayer
@@ -19,6 +19,6 @@ const Circle = () => {
       <animated.div className={styles.circle} style={float}></animated.div>
     </ParallaxLayer>
   );
-}
+};
 
 export default Circle;

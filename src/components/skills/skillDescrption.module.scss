@@ -1,0 +1,26 @@
+@use "../../styles/abstracts" as *;
+
+.container {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 50%;
+  height: 80%;
+  padding: 2rem;
+}
+
+.title {
+  @include heading-4xl;
+  font-family: $heading-font;
+  font-weight: bold;
+  color: white;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-width: 480px;
+}

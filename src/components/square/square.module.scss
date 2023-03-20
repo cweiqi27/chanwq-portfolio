@@ -1,0 +1,15 @@
+@use "../../styles/abstracts/index" as *;
+
+.container {
+  position: relative;
+}
+
+.square {
+  position: absolute;
+  left: 50px;
+  top: 60vh;
+  width: Min(20vw, 5em);
+  padding: Min(20vw, 5em);
+  border: 1px solid white;
+  opacity: 50%;
+}

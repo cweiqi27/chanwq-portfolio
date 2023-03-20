@@ -1,22 +1,34 @@
-@use '../../styles/abstracts/index' as *;
+@use "../../styles/abstracts/index" as *;
 
 .ring {
   position: relative;
   display: grid;
   place-items: center;
-  padding: 2.75rem 1.5rem;
+  padding: 2rem 1rem;
   border: solid 1px white;
   border-radius: 100%;
+  cursor: pointer;
   @include glass;
-
 
   .ball {
     position: absolute;
-    padding: 0.75rem;
+    padding: 0.45rem;
     border-radius: 50%;
     background-color: white;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  }
+
+  &:hover .ball {
+    background-color: $violet;
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+      filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
   }
 }
 
-
-
+.label {
+  font-size: $text-sm;
+  color: white;
+}

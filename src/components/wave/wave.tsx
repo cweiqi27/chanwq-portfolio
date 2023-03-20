@@ -1,17 +1,21 @@
 import { SVGProps } from "react";
-import {ParallaxLayer} from "@react-spring/parallax";
+import { ParallaxLayer } from "@react-spring/parallax";
+import styles from "./wave.module.scss";
 
 const Wave = (props: SVGProps<SVGSVGElement>) => (
-  <ParallaxLayer
-    offset={0.9}
-    speed={0.3}
-  >
+  <ParallaxLayer offset={0} speed={0.3} className={styles.waveContainer}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       {...props}
       viewBox="0 350 900 600"
       preserveAspectRatio="none"
-      style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none"}}
+      style={{
+        position: "absolute",
+        top: "-10%",
+        left: 0,
+        width: "100%",
+        height: "100%",
+      }}
     >
       <path
         d="m0 393 21.5 5.3c21.5 5.4 64.5 16 107.3 9.5 42.9-6.5 85.5-30.1 128.4-38 42.8-7.8 85.8.2 128.6 11 42.9 10.9 85.5 24.5 128.4 21.7 42.8-2.8 85.8-22.2 128.6-20.3 42.9 1.8 85.5 24.8 128.4 32 42.8 7.1 85.8-1.5 107.3-5.9L900 404v197H0Z"
@@ -32,9 +36,10 @@ const Wave = (props: SVGProps<SVGSVGElement>) => (
       <path
         d="m0 529 21.5 7.2c21.5 7.1 64.5 21.5 107.3 22.3 42.9.8 85.5-11.8 128.4-19.2C300 532 343 530 385.8 530c42.9 0 85.5 2 128.4 1.5 42.8-.5 85.8-3.5 128.6-1.2 42.9 2.4 85.5 10 128.4 14.2 42.8 4.2 85.8 4.8 107.3 5.2l21.5.3v51H0Z"
         fill="#c62368"
+        stroke="#c62368"
       />
     </svg>
   </ParallaxLayer>
-)
+);
 
 export default Wave;

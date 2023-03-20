@@ -1,17 +1,15 @@
-@use '../../styles/abstracts/index' as *;
+@use "../../styles/abstracts/index" as *;
 
 .circleContainer {
   display: flex;
   justify-content: left;
   align-items: center;
-  @include container;
 }
 
 .circle {
-  width: Min(30vw, 10em);
-  padding: Min(30vw, 10em);
+  width: Min(20vw, 10em);
+  padding: Min(20vw, 10em);
   border: 1px solid white;
+  opacity: 30%;
   border-radius: 100%;
-  opacity: 50%;
-  background-color: $azure;
 }

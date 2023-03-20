@@ -1,14 +1,42 @@
-@use '../../styles/abstracts/index' as *;
+@use "../../styles/abstracts/index" as *;
 
 .header {
+  z-index: 50;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 0.5rem;
   @include container;
 
   h1 {
+    position: relative;
     @include heading-2xl;
+    font-weight: $font-semibold;
+    color: lighten($color: #000000, $amount: 25);
     cursor: default;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20%;
+      height: 10%;
+      content: "";
+      background-color: lighten($pink, 25);
+    }
+  }
+
+  .icons {
+    display: flex;
+    gap: 0.25em;
+
+    & > * {
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+      }
+    }
   }
 }
 
@@ -17,5 +45,3 @@
     padding: 0 2rem;
   }
 }
-
-

@@ -1,0 +1,14 @@
+@use "../../styles/abstracts" as *;
+
+.skillsBackground {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #c62368;
+}
+
+.container {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+}
