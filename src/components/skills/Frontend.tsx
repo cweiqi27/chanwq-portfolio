@@ -10,9 +10,7 @@ import {
 } from "@tabler/icons-react";
 import styles from "./.skillListCard.module.scss";
 
-type Props = {};
-
-const Frontend = (props: Props) => {
+const Frontend = () => {
   return (
     <div className={styles.frontend}>
       <h2>Frontend</h2>
