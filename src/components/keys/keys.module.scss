@@ -1,45 +1,47 @@
-@use '../../styles/abstracts/index' as *;
+@use "../../styles/abstracts/index" as *;
 
-.keysContainer {
+.container {
   position: relative;
   display: flex;
   justify-content: right;
   @include container;
 }
 
-.keys {
-  position: relative;
+.whiteKey,
+.blackKey,
+.shadowKey {
+  position: absolute;
+}
 
-  .keyShadow {
-    position: relative;
-  }
+.shadowKey {
+  z-index: -2;
+  top: 0;
+  right: 0.75rem;
+  padding: 10em clamp(1.25rem, 3vw, 3rem);
+  border-radius: 0.5rem;
+  border: 0.25rem solid $raisin;
+  @include glass;
+  @include shadow-bottom-right-sm;
+}
 
-  .whiteKey,
-  .blackKey {
-    position: absolute;
-  }
+.whiteKey {
+  z-index: -1;
+  top: -1rem;
+  right: 1rem;
+  padding: 10em clamp(1.25rem, 3vw, 3rem);
+  border-radius: 0.5rem;
+  border: 0.25rem solid $raisin;
+  background-color: white;
+  @include shadow-bottom-right-sm;
+}
 
-  .keyShadow {
-    z-index: 1;
-    top: 0;
-    left: 0;
-    padding: 10em Min(3em, 3vw);
-    @include glass;
-  }
-
-  .whiteKey {
-    z-index: 2;
-    top: -.75rem;
-    left: -.75rem;
-    padding: 10em Min(3em, 3vw);
-    background-color: white;
-  }
-
-  .blackKey {
-    z-index: 3;
-    top: -1.5rem;
-    left: -2rem;
-    padding: 5em Min(2em, 2vw);
-    background-color: black;
-  }
+.blackKey {
+  z-index: 0;
+  top: -1.25rem;
+  right: 2.5rem;
+  padding: 5em clamp(1rem, 2vw, 2rem);
+  border-radius: 0.5rem;
+  border: 0.25rem solid $raisin;
+  background-color: black;
+  @include shadow-bottom-right-sm;
 }

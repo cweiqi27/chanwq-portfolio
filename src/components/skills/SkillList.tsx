@@ -1,44 +1,24 @@
+import Backend from "./Backend";
+import Frontend from "./Frontend";
 import styles from "./skillList.module.scss";
-import React from "react";
-import {
-  IconBrandGit,
-  IconBrandMongodb,
-  IconBrandMysql,
-  IconBrandNextjs,
-  IconBrandReact,
-  IconBrandTailwind,
-  IconBrandTypescript,
-} from "@tabler/icons-react";
-import { animated } from "@react-spring/web";
+import { animated, config, useInView, useSpring } from "@react-spring/web";
 
-type Props = {};
+const SkillList = () => {
+  const [ref, isInView] = useInView({
+    rootMargin: "0px 0px -10% 0px",
+  });
 
-const SkillList = (props: Props) => {
+  const springStyle = useSpring({
+    opacity: isInView ? 1 : 0,
+    y: isInView ? 0 : 20,
+    config: config.wobbly,
+    delay: 420,
+  });
+
   return (
-    <animated.div className={styles.skillsContainer}>
-      <ul className={styles.skillList}>
-        <li>
-          <IconBrandNextjs />
-        </li>
-        <li>
-          <IconBrandReact />
-        </li>
-        <li>
-          <IconBrandTypescript />
-        </li>
-        <li>
-          <IconBrandMysql />
-        </li>
-        <li>
-          <IconBrandMongodb />
-        </li>
-        <li>
-          <IconBrandGit />
-        </li>
-        <li>
-          <IconBrandTailwind />
-        </li>
-      </ul>
+    <animated.div className={styles.container} ref={ref} style={springStyle}>
+      <Frontend />
+      <Backend />
     </animated.div>
   );
 };

@@ -4,10 +4,17 @@ import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 
 const Header = () => {
   return (
-    <ParallaxLayer factor={0.1} offset={0} speed={2} className={styles.header}>
+    <ParallaxLayer
+      factor={0.1}
+      offset={0}
+      speed={2}
+      className={styles.container}
+    >
       <h1>chanwq</h1>
       <nav className={styles.icons}>
-        <IconBrandGithub />
+        <a href="https://github.com/cweiqi27" target="_blank" rel="noreferrer">
+          <IconBrandGithub />
+        </a>
         <IconBrandLinkedin />
       </nav>
     </ParallaxLayer>

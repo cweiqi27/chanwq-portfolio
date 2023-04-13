@@ -1,16 +1,21 @@
 @use "/src/styles/abstracts/index" as *;
 
 .heroBackground {
+  display: flex;
+  justify-content: center;
   width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-    170deg,
-    rgba(255, 194, 60, 1) 39%,
-    rgba(250, 47, 181, 1) 93%
-  );
+  height: 100dvh;
+  // background-color: $azure;
 }
 
 .container {
   position: relative;
+  width: 100%;
+  height: 95dvh;
+  transform: translateY(3dvh);
+  border-radius: 1rem;
+  border: 0.25rem solid black;
+  border-bottom: 0.5rem solid black;
+  background-color: #ffffe0;
   @include container;
 }

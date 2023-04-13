@@ -1,14 +1,19 @@
 @use "../../styles/abstracts" as *;
 
 .skillsBackground {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: #c62368;
+  // position: relative;
+  // width: 100vw;
+  // height: 100dvh;
 }
 
 .container {
-  @include container;
   display: flex;
+  flex-direction: column;
+  padding: 0 0.25rem;
+  @include md {
+    flex-direction: row;
+  }
+  gap: 0.25rem;
   justify-content: space-between;
+  @include container;
 }

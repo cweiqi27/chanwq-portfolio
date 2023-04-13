@@ -3,16 +3,12 @@ import Head from "next/head";
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
-import Watermark from "../components/watermark/Watermark";
 import ScrollButton from "../components/scrollButton/ScrollButton";
 import { useRef } from "react";
-import Wave from "../components/wave/Wave";
 import Circle from "../components/circle/Circle";
-import Keys from "../components/keys/keys";
+import Keys from "../components/keys/Keys";
 import HeroBackground from "../components/hero/heroBackground/HeroBackground";
 import SkillsBackground from "../components/skills/SkillsBackground";
-import SkillList from "../components/skills/SkillList";
-import SkillDescription from "../components/skills/SkillDescription";
 import Square from "../components/square/Square";
 
 const Home: NextPage = () => {
@@ -33,7 +29,7 @@ const Home: NextPage = () => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
         <link
@@ -41,38 +37,39 @@ const Home: NextPage = () => {
           rel="stylesheet"
         />
       </Head>
-
-      <Parallax pages={2} ref={parallax}>
+      <Parallax pages={5} ref={parallax}>
         {/* Hero Section */}
         <HeroBackground>
+          {/* <Watermark
+                        name="REACT"
+                        offset={0}
+                        speed={0}
+                        factor={0.1}
+                        position="right"
+                        size="lg"
+                    />
+                    <Watermark
+                        name="ts"
+                        offset={0.1}
+                        speed={0}
+                        factor={0.2}
+                        position="center"
+                        size="md"
+                    /> */}
           <Header />
           <Square />
           <Circle />
           <Keys />
           <Hero />
-          <Watermark
-            name="REACT"
-            offset={0}
-            speed={0}
-            factor={0.1}
-            position="right"
-            size="lg"
-          />
           <ScrollButton
             offset={0.8}
-            speed={-0.25}
+            speed={0.1}
             factor={0.1}
             position="right"
             onClick={() => scroll(1)}
           />
         </HeroBackground>
-
-        {/* Skills Section */}
-        <SkillsBackground>
-          <SkillDescription />
-          <SkillList />
-          <Wave />
-        </SkillsBackground>
+        <SkillsBackground />
       </Parallax>
     </>
   );

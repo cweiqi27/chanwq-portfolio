@@ -1,0 +1,16 @@
+@use "../../styles/abstracts" as *;
+
+.container {
+    position: relative;
+}
+
+.triangle {
+    position: absolute;
+    left: 15vw;
+    top: 15dvh;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 2rem 4rem 2rem;
+    border-color: transparent transparent $violet transparent;
+}

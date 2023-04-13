@@ -7,9 +7,10 @@
 }
 
 .circle {
-  width: Min(20vw, 10em);
-  padding: Min(20vw, 10em);
-  border: 1px solid white;
-  opacity: 30%;
+  width: Min(10vw, 7em);
+  padding: Min(10vw, 7em);
   border-radius: 100%;
+  border: 0.2rem solid $raisin;
+  border-bottom: 0.4rem solid $raisin;
+  @include shadow-bottom-right-sm;
 }

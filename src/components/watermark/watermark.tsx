@@ -1,13 +1,13 @@
-import styles from './watermark.module.scss';
-import {ParallaxLayer} from "@react-spring/parallax";
+import styles from "./watermark.module.scss";
+import { ParallaxLayer } from "@react-spring/parallax";
 
 type WatermarkProps = {
   name: string;
   offset: number;
   speed?: number;
   factor?: number;
-  position: string;
-  size: string;
+  position: "left" | "right" | "center";
+  size: "lg" | "md" | "sm";
 };
 
 const Watermark = ({
@@ -16,7 +16,7 @@ const Watermark = ({
   speed,
   factor,
   position,
-  size
+  size,
 }: WatermarkProps) => {
   return (
     <ParallaxLayer
@@ -25,9 +25,9 @@ const Watermark = ({
       factor={factor}
       className={`${styles.watermarkContainer} ${styles[position]}`}
     >
-      <h1 className={`${styles.watermark} ${styles[size]}`}>{ name }</h1>
+      <h1 className={`${styles.watermark} ${styles[size]}`}>{name}</h1>
     </ParallaxLayer>
   );
-}
+};
 
 export default Watermark;

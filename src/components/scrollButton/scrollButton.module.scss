@@ -5,30 +5,33 @@
   display: grid;
   place-items: center;
   padding: 2rem 1rem;
-  border: solid 1px white;
   border-radius: 100%;
+  border: 0.2rem solid $raisin;
+  border-bottom: 0.4rem solid $raisin;
+  background-color: whitesmoke;
   cursor: pointer;
-  @include glass;
+  @include shadow-bottom-right-sm;
 
   .ball {
     position: absolute;
     padding: 0.45rem;
     border-radius: 50%;
-    background-color: white;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    background-color: lighten($raisin, 5);
+    border: 0.15rem solid $raisin;
   }
 
   &:hover .ball {
-    background-color: $violet;
+    background-color: $pink;
     transition-property: color, background-color, border-color,
       text-decoration-color, fill, stroke, opacity, box-shadow, transform,
       filter, backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
+    transition-duration: 75ms;
   }
 }
 
 .label {
   font-size: $text-sm;
-  color: white;
+  font-weight: $font-bold;
+  color: $raisin;
 }

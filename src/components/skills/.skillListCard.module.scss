@@ -1,0 +1,34 @@
+@use "../../styles/abstracts" as *;
+
+.frontend,
+.backend {
+  & h2 {
+    @include heading-xl;
+    font-weight: $font-extrabold;
+  }
+
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.25rem solid black;
+  border-bottom: 0.5rem solid black;
+
+  .skillList {
+    display: flex;
+    gap: 0.5rem;
+    cursor: default;
+  }
+}
+
+.frontend {
+  background-color: darken($pink, 15);
+  & .skillList {
+    & li {
+      color: $raisin;
+    }
+  }
+}
+
+.backend {
+  background-color: darken($violet, 15);
+  color: $azure;
+}

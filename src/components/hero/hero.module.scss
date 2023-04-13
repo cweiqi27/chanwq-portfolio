@@ -1,70 +1,74 @@
 @use "../../styles/abstracts" as *;
 
 .heroContainer {
-  display: grid;
-  place-items: center;
-  padding: 0 0.5em;
-  @include container;
+    display: grid;
+    place-items: center;
+    padding: 0 0.5em;
+    @include container;
 }
 
 .heroTitle {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 2em;
-  // border-radius: 1rem;
-  // @include glass;
-  // border: 1px solid rgba(255, 255, 255, 0.45);
-
-  & .greeting {
-    color: white;
-  }
-
-  & .name {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    font-family: $heading-font;
-    @include heading-7xl;
-    font-weight: $font-bold;
-    letter-spacing: 0.15rem;
-    background: linear-gradient(
-      135deg,
-      rgba(16, 7, 32, 1) 0%,
-      rgba(49, 8, 123, 1) 36%,
-      rgba(171, 32, 124, 1) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+    gap: 0.5rem;
+    padding: 2em;
+    border-radius: 1rem;
+    border: 0.2rem solid $raisin;
+    border-bottom: 0.4rem solid $raisin;
+    background-color: $yellow;
+    @include shadow-bottom-right;
 
-  & .identity {
-    color: white;
-    align-self: flex-end;
-  }
+    & .greeting,
+    .identity {
+        color: $raisin;
+        font-weight: $font-bold;
+    }
 
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0.5rem;
-    content: "<>";
-    font-size: $text-lg;
-    color: white;
-    opacity: 40%;
-    transform: rotate(-15deg);
-  }
+    & .identity {
+        align-self: flex-end;
+    }
 
-  &::after {
-    position: absolute;
-    bottom: 0;
-    right: 0.5rem;
-    content: "</>";
-    font-size: $text-lg;
-    color: white;
-    opacity: 40%;
-    transform: rotate(5deg);
-  }
+    & .name {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        font-family: $heading-font;
+        @include heading-7xl;
+        font-weight: $font-extrabold;
+        letter-spacing: 0.15rem;
+        color: $raisin;
+        // background: linear-gradient(
+        //     135deg,
+        //     rgba(16, 7, 32, 1) 0%,
+        //     rgba(49, 8, 123, 1) 36%,
+        //     rgba(171, 32, 124, 1) 100%
+        // );
+        // background-clip: text;
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0.5rem;
+        content: "<>";
+        font-size: $text-lg;
+        font-weight: $font-bold;
+        color: $raisin;
+        transform: rotate(-15deg);
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        right: 0.5rem;
+        content: "</>";
+        font-size: $text-lg;
+        font-weight: $font-bold;
+        color: $raisin;
+        transform: rotate(5deg);
+    }
 }

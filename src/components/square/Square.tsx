@@ -20,11 +20,10 @@ const Square = () => {
     <ParallaxLayer
       offset={0}
       speed={0.4}
-      horizontal
-      factor={1}
+      factor={0.1}
       className={styles.container}
     >
-      <animated.div className={styles.square} style={float}></animated.div>
+      <animated.div className={styles.square} style={float} />
     </ParallaxLayer>
   );
 };

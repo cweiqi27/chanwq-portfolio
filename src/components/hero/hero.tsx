@@ -9,24 +9,38 @@ const Hero = () => {
     config: config.molasses,
   });
 
-  const textAppear = useSpring({
+  const textAppearGreeting = useSpring({
     from: { opacity: 0, y: 20 },
     to: { opacity: 1, y: 0 },
     config: config.molasses,
-    delay: 500,
+    delay: 300,
+  });
+
+  const textAppearName = useSpring({
+    from: { opacity: 0, y: 20 },
+    to: { opacity: 1, y: 0 },
+    config: config.molasses,
+    delay: 800,
+  });
+
+  const textAppearIdentity = useSpring({
+    from: { opacity: 0, y: 20 },
+    to: { opacity: 1, y: 0 },
+    config: config.molasses,
+    delay: 1000,
   });
 
   return (
-    <ParallaxLayer offset={0} speed={-0.5} className={styles.heroContainer}>
+    <ParallaxLayer offset={0} speed={0.2} className={styles.heroContainer}>
       <animated.div className={styles.heroTitle} style={float}>
-        <animated.div className={styles.greeting}>
-          Hello world, i&apos;m
+        <animated.div style={textAppearGreeting} className={styles.greeting}>
+          Hello world, I&apos;m
         </animated.div>
-        <animated.h1 style={textAppear} className={styles.name}>
+        <animated.h1 style={textAppearName} className={styles.name}>
           Wei Qi
         </animated.h1>
-        <animated.div className={styles.identity}>
-          Full-Stack Web Developer
+        <animated.div className={styles.identity} style={textAppearIdentity}>
+          Web Developer
         </animated.div>
       </animated.div>
     </ParallaxLayer>

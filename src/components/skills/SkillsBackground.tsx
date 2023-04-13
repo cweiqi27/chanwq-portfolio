@@ -1,16 +1,17 @@
 import styles from "./skillsBackground.module.scss";
 import { useSpring, animated } from "@react-spring/web";
 import SkillList from "./SkillList";
+import SkillDescription from "./SkillDescription";
+import { ParallaxLayer } from "@react-spring/parallax";
 
-type SkillsBackgroundProps = {
-  children: React.ReactNode;
-};
-
-const SkillsBackground = ({ children }: SkillsBackgroundProps) => {
+const SkillsBackground = () => {
   return (
-    <div className={styles.skillsBackground}>
-      <div className={styles.container}>{children}</div>
-    </div>
+    <ParallaxLayer offset={1} className={styles.skillsBackground}>
+      <div className={styles.container}>
+        <SkillDescription />
+        <SkillList />
+      </div>
+    </ParallaxLayer>
   );
 };
 

@@ -16,7 +16,7 @@ const Circle = () => {
       factor={1}
       className={styles.circleContainer}
     >
-      <animated.div className={styles.circle} style={float}></animated.div>
+      <animated.div className={styles.circle} style={float} />
     </ParallaxLayer>
   );
 };

@@ -1,15 +1,16 @@
 @use "../../styles/abstracts/index" as *;
 
 .container {
-  position: relative;
+    position: relative;
 }
 
 .square {
-  position: absolute;
-  left: 50px;
-  top: 60vh;
-  width: Min(20vw, 5em);
-  padding: Min(20vw, 5em);
-  border: 1px solid white;
-  opacity: 50%;
+    position: absolute;
+    left: Min(20vw, 60px);
+    top: 70dvh;
+    width: Min(5vw, 2em);
+    padding: Min(5vw, 2em);
+    border-radius: 0.5rem;
+    border: 0.2rem solid $raisin;
+    @include shadow-bottom-right-sm;
 }
