@@ -6,7 +6,7 @@ const Keys = () => {
   const shadowStyle = useSpring({
     from: { y: 0, x: 0 },
     to: { y: 10, x: 10 },
-    config: config.molasses,
+    config: config.slow,
     loop: { reverse: true },
   });
 
@@ -15,7 +15,7 @@ const Keys = () => {
     to: { y: -10, x: -10 },
     delay: 175,
     loop: { reverse: true },
-    config: config.molasses,
+    config: config.slow,
   });
 
   const blackStyle = useSpring({
@@ -23,7 +23,7 @@ const Keys = () => {
     to: { y: -10, x: -15 },
     delay: 75,
     loop: { reverse: true },
-    config: config.molasses,
+    config: config.slow,
   });
 
   return (
