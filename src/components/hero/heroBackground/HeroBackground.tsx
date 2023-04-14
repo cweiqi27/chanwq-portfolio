@@ -6,10 +6,8 @@ type HeroBackgroundProps = {
 };
 
 const HeroBackground = ({ children }: HeroBackgroundProps) => {
-  const springStyle = useSpring({});
-
   return (
-    <animated.div className={styles.heroBackground} style={springStyle}>
+    <animated.div className={styles.heroBackground}>
       <div className={styles.container}>{children}</div>
     </animated.div>
   );
