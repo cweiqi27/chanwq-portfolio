@@ -10,6 +10,8 @@ import Keys from "../components/keys/Keys";
 import HeroBackground from "../components/hero/heroBackground/HeroBackground";
 import SkillsBackground from "../components/skills/SkillsBackground";
 import Square from "../components/square/Square";
+import ProjectDescription from "../components/projects/ProjectDescription";
+import styles from "./index.module.scss";
 
 const Home: NextPage = () => {
   const parallax = useRef<IParallax>(null);
@@ -37,25 +39,9 @@ const Home: NextPage = () => {
           rel="stylesheet"
         />
       </Head>
-      <Parallax pages={5} ref={parallax}>
+      <Parallax pages={3} ref={parallax}>
         {/* Hero Section */}
         <HeroBackground>
-          {/* <Watermark
-                        name="REACT"
-                        offset={0}
-                        speed={0}
-                        factor={0.1}
-                        position="right"
-                        size="lg"
-                    />
-                    <Watermark
-                        name="ts"
-                        offset={0.1}
-                        speed={0}
-                        factor={0.2}
-                        position="center"
-                        size="md"
-                    /> */}
           <Header />
           <Square />
           <Circle />
@@ -70,6 +56,13 @@ const Home: NextPage = () => {
           />
         </HeroBackground>
         <SkillsBackground />
+        <ParallaxLayer offset={2} className={styles.projectTitleContainer}>
+          <div className={styles.projectTitleCard}>
+            <span>🥴</span>
+            <h1>UNDER CONSTRUCTION</h1>
+            <p>Come back later to see what&apos;s up! 😎</p>
+          </div>
+        </ParallaxLayer>
       </Parallax>
     </>
   );

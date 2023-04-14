@@ -1,0 +1,42 @@
+@use "/src/styles/abstracts" as *;
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.25rem;
+  @include container;
+}
+
+.projectTitleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectTitleCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.25rem solid black;
+  border-bottom: 0.5rem solid black;
+  background-color: $pink;
+  & span {
+    @include heading-8xl;
+  }
+  & h1 {
+    @include heading-4xl;
+    font-family: $heading-font;
+    font-weight: $font-extrabold;
+    color: black;
+  }
+  & p {
+    font-size: $text-lg;
+    font-weight: $font-bold;
+    color: $raisin;
+  }
+}
