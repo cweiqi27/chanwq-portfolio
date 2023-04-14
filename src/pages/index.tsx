@@ -10,7 +10,6 @@ import Keys from "../components/keys/Keys";
 import HeroBackground from "../components/hero/heroBackground/HeroBackground";
 import SkillsBackground from "../components/skills/SkillsBackground";
 import Square from "../components/square/Square";
-import ProjectDescription from "../components/projects/ProjectDescription";
 import styles from "./index.module.scss";
 
 const Home: NextPage = () => {
