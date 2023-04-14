@@ -3,125 +3,159 @@
 
 // Layouts
 @mixin container {
-    margin: 0 auto;
-    max-width: $screen-xl;
+  margin: 0 auto;
+  max-width: $screen-xl;
 }
 
 // Breakpoints
 @mixin sm {
-    @media (min-width: $screen-sm) {
-        @content;
-    }
+  @media (min-width: $screen-sm) {
+    @content;
+  }
 }
 
 @mixin md {
-    @media (min-width: $screen-md) {
-        @content;
-    }
+  @media (min-width: $screen-md) {
+    @content;
+  }
 }
 
 @mixin lg {
-    @media (min-width: $screen-lg) {
-        @content;
-    }
+  @media (min-width: $screen-lg) {
+    @content;
+  }
 }
 
 @mixin xl {
-    @media (min-width: $screen-xl) {
-        @content;
-    }
+  @media (min-width: $screen-xl) {
+    @content;
+  }
 }
 
 // Headings
 @mixin heading-9xl {
-    font-size: $text-9xl;
-    line-height: 1;
-    letter-spacing: 1rem;
+  font-size: $text-9xl;
+  line-height: 1;
+  letter-spacing: 1rem;
 }
 
 @mixin heading-8xl {
-    font-size: $text-8xl;
-    line-height: 1;
+  font-size: $text-8xl;
+  line-height: 1;
 }
 
 @mixin heading-7xl {
-    font-size: $text-7xl;
-    line-height: 1;
+  font-size: $text-7xl;
+  line-height: 1;
 }
 
 @mixin heading-6xl {
-    font-size: $text-6xl;
-    line-height: 1;
+  font-size: $text-6xl;
+  line-height: 1;
 }
 
 @mixin heading-5xl {
-    font-size: $text-5xl;
-    line-height: 1;
+  font-size: $text-5xl;
+  line-height: 1;
 }
 
 @mixin heading-4xl {
-    font-size: $text-4xl;
-    line-height: 2.5rem;
+  font-size: $text-4xl;
+  line-height: 2.5rem;
 }
 
 @mixin heading-3xl {
-    font-size: $text-3xl;
-    line-height: 2.25rem;
+  font-size: $text-3xl;
+  line-height: 2.25rem;
 }
 
 @mixin heading-2xl {
-    font-size: $text-2xl;
-    line-height: 2rem;
+  font-size: $text-2xl;
+  line-height: 2rem;
 }
 
 @mixin heading-xl {
-    font-size: $text-xl;
-    line-height: 1.75rem;
+  font-size: $text-xl;
+  line-height: 1.75rem;
 }
 
 @mixin heading-lg {
-    font-size: $text-lg;
-    line-height: 1.75rem;
+  font-size: $text-lg;
+  line-height: 1.75rem;
 }
 
 @mixin heading-md {
-    font-size: $text-base;
-    line-height: 1.5rem;
+  font-size: $text-base;
+  line-height: 1.5rem;
 }
 
 // Turn off selection
 @mixin no-select {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 // Glass
 @mixin glass {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 // Shadows
 @mixin shadow-bottom-right {
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
 }
 
 @mixin shadow-bottom-right-sm {
-    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.27);
-    -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.27);
-    -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.27);
 }
 
 @mixin shadow-bottom {
-    box-shadow: 2px 9px 5px 0px rgba(0, 0, 0, 0.27);
-    -webkit-box-shadow: 2px 9px 5px 0px rgba(0, 0, 0, 0.27);
-    -moz-box-shadow: 2px 9px 5px 0px rgba(0, 0, 0, 0.27);
+  box-shadow: 2px 9px 5px 0px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 2px 9px 5px 0px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 2px 9px 5px 0px rgba(0, 0, 0, 0.27);
+}
+
+// Transitions
+@mixin transition {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@mixin transition-colors {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@mixin transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@mixin transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@mixin transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
