@@ -4,6 +4,7 @@ import styles from "./skillDescrption.module.scss";
 const SkillDescription = () => {
   const [ref, isInView] = useInView({
     rootMargin: "0px 0px -10% 0px",
+    once: true,
   });
 
   const springStyle = useSpring({

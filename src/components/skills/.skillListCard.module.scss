@@ -1,34 +1,62 @@
 @use "../../styles/abstracts" as *;
 
 .frontend,
-.backend {
+.backend,
+.others {
   & h2 {
     @include heading-xl;
     font-weight: $font-extrabold;
   }
-
+  display: flex;
+  flex-direction: column;
+  @include sm {
+    flex-direction: row;
+    align-items: center;
+  }
+  justify-content: space-between;
+  gap: 0.5rem;
   padding: 1rem;
   border-radius: 1rem;
   border: 0.25rem solid black;
   border-bottom: 0.5rem solid black;
-
-  .skillList {
-    display: flex;
-    gap: 0.5rem;
-    cursor: default;
-  }
 }
 
 .frontend {
-  background-color: darken($pink, 15);
-  & .skillList {
-    & li {
-      color: $raisin;
-    }
-  }
+  background-color: lighten($violet, 25);
 }
 
 .backend {
-  background-color: darken($violet, 15);
-  color: $azure;
+  background-color: darken($pink, 15);
+}
+
+.others {
+  background-color: darken($yellow, 15);
+}
+
+.left > * + * {
+  margin-top: 0.25rem;
+}
+
+.list {
+  display: flex;
+  gap: 0.5rem;
+  cursor: default;
+}
+
+.btn,
+.btnActive {
+  padding: 0.15rem;
+  cursor: pointer;
+  color: $raisin;
+  &:hover {
+    color: lighten($raisin, 80);
+  }
+  &Active {
+    color: lighten($raisin, 80);
+  }
+}
+
+.selectedLabel {
+  font-size: $text-2xl;
+  font-weight: $font-extrabold;
 }

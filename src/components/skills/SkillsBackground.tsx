@@ -1,15 +1,15 @@
 import styles from "./skillsBackground.module.scss";
 import { useSpring, animated } from "@react-spring/web";
-import SkillList from "./SkillList";
+import SkillListContainer from "./SkillListContainer";
 import SkillDescription from "./SkillDescription";
 import { ParallaxLayer } from "@react-spring/parallax";
 
 const SkillsBackground = () => {
   return (
-    <ParallaxLayer offset={1} className={styles.skillsBackground}>
+    <ParallaxLayer offset={1} speed={-0.02} className={styles.skillsBackground}>
       <div className={styles.container}>
         <SkillDescription />
-        <SkillList />
+        <SkillListContainer />
       </div>
     </ParallaxLayer>
   );
