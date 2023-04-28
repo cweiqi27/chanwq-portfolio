@@ -18,19 +18,7 @@ const SkillDescription = () => {
     <animated.div className={styles.container} ref={ref} style={springStyle}>
       <h1 className={styles.title}>i. Repertoire</h1>
       <div className={styles.description}>
-        <p>
-          I am knowledgeable in different kinds of technologies and frameworks.
-        </p>
-        <p>
-          However, React and TypeScript remain my bread and butter, with
-          TailwindCSS and Sass being my favorites for styling.
-        </p>
-        <p>
-          On the backend, I am flexible with multiple different languages and
-          frameworks, including PHP Laravel, TypeScript/JavaScript
-          Node.js/Express, and Next.js API routes. I am also familliar with
-          various methods of handling APIs, such as REST and tRPC.
-        </p>
+        <p>Here is a list of technologies that I work with.</p>
       </div>
     </animated.div>
   );
