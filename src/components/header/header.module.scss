@@ -1,4 +1,4 @@
-@use "../../styles/abstracts/index" as *;
+@use "../../styles/abstracts/" as *;
 
 .container {
     z-index: 50;
@@ -34,7 +34,7 @@
             cursor: pointer;
 
             &:hover {
-                color: white;
+                color: lighten($raisin, 25);
             }
         }
     }

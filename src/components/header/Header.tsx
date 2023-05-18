@@ -15,7 +15,9 @@ const Header = () => {
         <a href="https://github.com/cweiqi27" target="_blank" rel="noreferrer">
           <IconBrandGithub />
         </a>
-        <IconBrandLinkedin />
+        <a href="https://linkedin.com/in/chan-wei-qi" target="_blank" rel="noreferrer">
+          <IconBrandLinkedin />
+        </a>
       </nav>
     </ParallaxLayer>
   );
