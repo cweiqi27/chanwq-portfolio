@@ -19,7 +19,6 @@ import {
 import styles from "./.skillListCard.module.scss";
 import { useEffect, useState } from "react";
 import {
-  AnimatedProps,
   animated,
   config,
   useSpring,
@@ -60,23 +59,23 @@ const SkillListCard = ({ type, isInView }: SkillListCardProps) => {
     type === "FRONTEND"
       ? "Frontend"
       : type === "BACKEND"
-      ? "Backend"
-      : "Others";
+        ? "Backend"
+        : "Others";
 
   const selectedItems: string[] =
     type === "FRONTEND"
       ? [
-          "Next.js",
-          "React",
-          "TypeScript",
-          "TailwindCSS",
-          "HeadlessUI",
-          "Sass",
-          "HTML",
-          "CSS",
-        ]
+        "Next.js",
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "HeadlessUI",
+        "Sass",
+        "HTML",
+        "CSS",
+      ]
       : type === "BACKEND"
-      ? [
+        ? [
           "TypeScript",
           "MySQL",
           "MongoDB",
@@ -85,7 +84,7 @@ const SkillListCard = ({ type, isInView }: SkillListCardProps) => {
           "REST, tRPC",
           "Prisma",
         ]
-      : ["Git", "Docker"];
+        : ["Git", "Docker"];
 
   useEffect(() => {
     transRef.start();
@@ -98,8 +97,8 @@ const SkillListCard = ({ type, isInView }: SkillListCardProps) => {
         type === "FRONTEND"
           ? styles.frontend
           : type === "BACKEND"
-          ? styles.backend
-          : styles.others
+            ? styles.backend
+            : styles.others
       }
       style={springStyle}
     >

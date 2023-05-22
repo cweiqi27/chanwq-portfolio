@@ -1,0 +1,67 @@
+@use "../../styles/abstracts" as *;
+
+.container {
+  position: relative;
+  width: 50%;
+  display: none;
+  @include md {
+    display: block;
+  }
+
+
+  .vector {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid black;
+    border-bottom: 6px solid black;
+    width: 10rem;
+    height: 10rem;
+    @include shadow-bottom-left;
+  }
+
+
+  $i: 1;
+  $increment: 3.5rem;
+  $colorIncrement: 7;
+  @while $i <= 6 {
+    $isOdd: $i % 2 == 0;
+    .vector:nth-child(#{$i}) {
+      z-index: $i + 1;
+      top: if($i == 1, 0, $increment * ($i - 1));
+      right: if($isOdd, 10rem, 2rem);
+      background-color: darken($color: lighten($yellow, $amount: 50), $amount: $colorIncrement * $i);
+      opacity: ($i * 3.5) / 10;
+    }
+    $i: $i + 1;
+  }
+}
+
+.rectangleFront, .rectangleBack {
+  position: absolute;
+  border-radius: 2rem;
+  width: 80%;
+  height: 70%;
+}
+
+.rectangleFront {
+  top: 5rem;
+  left: 2rem;
+  @include glass;
+}
+
+.rectangleBack {
+  top: 6rem;
+  left: 1rem;
+  background: rgb(29,0,36);
+  background: linear-gradient(90deg, rgba(29,0,36,1) 0%, rgba(121,9,99,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+
+.telescopeGuy {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 10rem;
+  height: 10rem;
+}

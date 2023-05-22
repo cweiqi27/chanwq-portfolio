@@ -1,6 +1,7 @@
 import SkillListCard from "./SkillListCard";
 import styles from "./skillListContainer.module.scss";
 import { animated, config, useInView, useSpring } from "@react-spring/web";
+import SkillDescription from "./SkillDescription";
 
 const SkillListContainer = () => {
   const [ref, isInView] = useInView({
@@ -10,6 +11,7 @@ const SkillListContainer = () => {
 
   return (
     <animated.div className={styles.container} ref={ref}>
+      <SkillDescription />
       <SkillListCard type="FRONTEND" isInView={isInView} />
       <SkillListCard type="BACKEND" isInView={isInView} />
       <SkillListCard type="OTHERS" isInView={isInView} />
