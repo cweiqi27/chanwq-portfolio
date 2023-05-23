@@ -16,7 +16,7 @@ import {
   IconBrandTailwind,
   IconBrandTypescript,
 } from "@tabler/icons-react";
-import styles from "./.skillListCard.module.scss";
+import styles from "./skillListCard.module.scss";
 import { useEffect, useState } from "react";
 import {
   animated,
@@ -259,7 +259,7 @@ const SkillListCard = ({ type, isInView }: SkillListCardProps) => {
       {transitions((style, i) => {
         return (
           <animated.div style={style} className={styles.selectedLabel}>
-            {selectedItems[i]}
+            <span>{selectedItems[i]}</span>
           </animated.div>
         );
       })}
